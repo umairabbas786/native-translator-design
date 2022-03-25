@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Global Native Translators</title>
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <style>
+/*--------------------------------------*/
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+button{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.slide-arrow{
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+.prev-arrow{
+  left: -40px;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 15px solid #000;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.next-arrow{
+  right: -40px;
+  width: 0;
+  height: 0;
+  border-right: 0 solid transparent;
+  border-left: 15px solid #000;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar">
+        <div class="container">
+            <div class="row mt-md-2 mt-0">
+            <div class="social-links col-md-8 d-flex justify-content-center justify-content-md-start">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+            <div class="contact-info col-md-4 d-flex justify-content-center justify-content-md-start">
+                <i class="bi bi-envelope"><a
+                        href="mailto:contact@example.com">contact@example.com</a></i>
+                <i class="bi bi-phone ms-4"><span>+1 5589 55488 55</span></i>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <!-- <h1 class="logo"><a href="index.html">BizLand<span>.</span></a></h1> -->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="logo"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="index.html">HOME</a></li>
+                    <li><a class="nav-link scrollto" href="about.html">ABOUT US</a></li>
+                    <li><a class="nav-link scrollto" href="services.html">SERVICES</a></li>
+                    <li><a class="nav-link scrollto " href="languages.html">LANGUAGES</a></li>
+                    <li><a class="nav-link scrollto" href="industry.html">INDUSTRY</a></li>
+                    <li class="dropdown"><a href="#"><span>GET IN TOUCH</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="contact.html">CONTACT US</a></li>
+                            <li><a href="quote.html">REQUEST A QUOTE</a></li>
+                            <li class="dropdown"><a href="#"><span>JOIN OUR TEAM</span> <i
+                                        class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a href="open_position.html">Internal Open Positions</a></li>
+                                    <li><a href="bussiness_partner.html">Become Our Business Partner</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <button style="margin-right: -100px!important;margin-left: 100px!important;white-space:nowrap"
+                    class="d-none ml-5 d-lg-block btn btn-block quote text-white"><a href="join.html" style="font-size: 16px;"><b>Get A Quote</b></a></button>                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mt-md-5 mt-0 pt-md-3 pt-0 px-5">
+                    <h1>Professional Translation at Your Finger Tips!</h1>
+                    <p>
+                        We provide translation solutions that ensure global consistency, local relevancy and technical usability across all touch points.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-md-5 mt-0 "
+                        style="border-radius: 24px 24px 24px 24px;background: rgb(24,35,36,0.6);box-shadow: 0 0 5px 1px #fff;">
+                        <div class="card-body p-5">
+                            <h2 style="color:#E99C14;font-weight: 700;line-height: 1;font-size: 35px;">Get Your <br>
+                                Translation Now</h2>
+                            <select name="from" id="from" class="form-control mt-3"
+                                style="background-color: #ffffff;border-radius: 24px 24px 24px 24px;-webkit-appearance: listbox !important">
+                                <option value="Translate From" disabled selected>Translate From</option>
+                                <option value="English">English</option>
+                                <option value="Urdu">Urdu</option>
+                                <option value="Mandarin Chinese">Mandarin Chinese</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Turkish">Turkish</option>
+                                <option value="Korean">Korean</option>
+                            </select>
+                            <select name="to" id="to" class="form-control mt-2"
+                                style="background-color: #ffffff;border-radius: 24px 24px 24px 24px;-webkit-appearance: listbox !important">
+                                <option value="Translate to" disabled selected>Translate to</option>
+                                <option value="English">English</option>
+                                <option value="Urdu">Urdu</option>
+                                <option value="Mandarin Chinese">Mandarin Chinese</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Turkish">Turkish</option>
+                                <option value="Korean">Korean</option>
+                            </select>
+                            <input type="text" name="words" class="form-control mt-2" placeholder="No of Words"
+                                style="background-color: #ffffff;border-radius: 24px 24px 24px 24px;">
+                            <a href="#"><button class="btn btn-block btn-dark mt-2"
+                                    style="border-radius: 24px 24px 24px 24px;">Get Started</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main" style="color: black;">
+        <section id="featured-services" class="featured-services" style="background-color: #F5F5F5;margin-top: -30px;">
+            <div class="container">
+                <div class="row mx-md-5 mx-0 abou">
+                    <div class="col-md-7">
+                        <h1 style="font-weight: 700;">ABOUT US</h1>
+                        <p>GlobalNative was created by a group of responsible and creative linguists with a passion for
+                            translation who believe in treating their customers with respect and faith.</p>
+                        <br>
+                        <p>Our qualified team consists of inhouse and freelance linguists, interpreters, translators,
+                            proofreaders, quality assurance managers, designers and web programmers, all with solid
+                            professional qualification and background in language translation and interpreting.</p>
+                    </div>
+                    <div class="col-md-4 col-12 mt-2">
+                        <center><img src="assets/img/about.jpg" alt="about img" width="350" height="350"></center>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Featured Services Section -->
+
+        <section id="featured-services" class="featured-services">
+            <div class="container">
+                <div class="row mx-md-5 mx-0">
+                    <div class="col-md-4 mt-md-0 mt-4">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/one.jpg" alt="one">
+                            <div class="card-body">
+                                <h4 style="font-weight: 600;color: #0079AD;" class="abou">APPROACH</h4>
+                                <p class="card-text">Our approach is individual, you will have your personal manager
+                                    that will take care of all your projects, will be in touch and keep on with you to
+                                    help develop your business.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-md-0 mt-4">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/two.jpg" alt="two">
+                            <div class="card-body">
+                                <h4 style="font-weight: 600;color: #0079AD;" class="abou">QUALITY</h4>
+                                <p class="card-text">The quality is the best and the price is fair, but most important,
+                                    there is no project that could scare us, even if we will have to rediscover the lost
+                                    language of Pharaohs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-md-0 mt-2">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/three.jpg" alt="three">
+                            <div class="card-body">
+                                <h4 style="font-weight: 600;color: #0079AD;" class="abou">RESULT</h4>
+                                <p class="card-text">Whether your translation project is small or large, in French or
+                                    Mandarin, an audio Book or an entire NASA stolen sketch of the latest Shuttle, we
+                                    will figure it out for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about section-bg">
+            <div class="container">
+                <div class="section-title">
+                    <h2>OUR SERVICES</h2>
+                    <p class="text-center">GlobalNative provides a wide range of translation services for big
+                        corporations and individual clients.</p>
+                </div>
+
+                <div class="row mx-md-5 mx-0">
+                    <div class="col-md-4 mt-4">
+                        <div class="card" style="background: rgb(78,78,78,0.5);height: 250px!important;">
+                            <div class="card-body text-center text-white p-4">
+                                <h5 class="card-title mt-2 mb-4"
+                                    style="font-weight: 300;font-size: 28px;color: #00C5BC;">Translation & Localization
+                                </h5>
+                                <p class="card-text mb-2">We understand that language can be a real barrier, this is why
+                                    we have a personal approach to each project & our unlimited motivation is your “BEST
+                                    CHANCE OF SUCCESS”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <div class="card" style="background: rgb(78,78,78,0.5);height: 250px!important;">
+                            <div class="card-body text-center text-white p-4">
+                                <h5 class="card-title mt-2 mb-4"
+                                    style="font-weight: 300;font-size: 28px;color: #00C5BC;">Proofreading</h5>
+                                <p class="card-text mb-2">Our qualified linguists will review your already translated
+                                    content to guarantee that “YOU MEAN IT” correctly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <div class="card" style="background: rgb(78,78,78,0.5);height: 250px!important;">
+                            <div class="card-body text-center text-white p-4">
+                                <h5 class="card-title mt-2 mb-4"
+                                    style="font-weight: 300;font-size: 28px;color: #00C5BC;">Desktop Publishing</h5>
+                                <p class="card-text mb-2">Our DTP experts will use the right tool to make your document
+                                    looks as if it were originally created in the target language.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <div class="card" style="background: rgb(78,78,78,0.5);height: 250px!important;">
+                            <div class="card-body text-center text-white p-4">
+                                <h5 class="card-title mt-2 mb-4"
+                                    style="font-weight: 300;font-size: 28px;color: #00C5BC;">Transcription</h5>
+                                <p class="card-text mb-2">“Leave no room for wrong interpretation”, use our
+                                    transcription services and you will broaden your business possibilities further.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <div class="card" style="background: rgb(78,78,78,0.5);height: 250px!important;">
+                            <div class="card-body text-center text-white p-4">
+                                <h5 class="card-title mt-2 mb-4"
+                                    style="font-weight: 300;font-size: 28px;color: #00C5BC;">Subtitling</h5>
+                                <p class="card-text mb-2">Be more efficient than your Media competitors, add subtitles
+                                    and translation to your video and make your content globally available “IN TIME”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <div class="card" style="background: rgb(78,78,78,0.5);height: 250px!important;">
+                            <div class="card-body text-center text-white p-4">
+                                <h5 class="card-title mt-2 mb-4"
+                                    style="font-weight: 300;font-size: 28px;color: #00C5BC;">Voiceover</h5>
+                                <p class="card-text mb-2">If you are extending your media product in countries where
+                                    subtitling is not acceptable, we’ll use a professional voiceover artist, any specifications is EASY for us.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+        <section class="language">
+            <div class="container">
+                <div class="row mx-md-5 mx-0 text-center">
+                    <div class="col-md-12">
+                        <h1 class="mt-3" style="font-weight: 700;">LANGUAGES</h1>
+                        <p class="mt-3">GlobalNative offers high-quality translation services in more than 100 languages
+                            and dialects.</p>
+                    </div>
+                    <ul style="list-style-type: none;display: flex;flex-wrap: wrap;justify-content: center;justify-content:space-around;font-size: 20px;">
+                        <li><span><i style="color: #00C5C5;" class="fa fa-check"></i></span> SCANDINAVIAN</li>
+                        <li><span><i style="color: #00C5C5;" class="fa fa-check"></i></span> EUROPEAN</li>
+                        <li><span><i style="color: #00C5C5;" class="fa fa-check"></i></span> AFRICAN</li>
+                        <li><span><i style="color: #00C5C5;" class="fa fa-check"></i></span> MIDDLE EASTERN</li>
+                        <li><span><i style="color: #00C5C5;" class="fa fa-check"></i></span> ASIAN</li>
+                    </ul>  
+                </div>
+                </div>
+        </section>
+
+        <section class="slider mx-md-5 mx-0">
+            <div class="container text-center ">
+                <h1 class="mt-3" style="font-weight: 700;">INDUSTRY</h1>
+                <p class="mt-3">Our highly qualified translators with rich background of each specific industry will make your products and services more accessible and familiar to your customers.</p>
+                <div class="customer slider">
+                    <div class="slide"><img src="assets/img/1.jpg"></div>
+                    <div class="slide"><img src="assets/img/2.jpg"></div>
+                    <div class="slide"><img src="assets/img/3.jpg"></div>
+                    <div class="slide"><img src="assets/img/4.jpg"></div>
+                    <div class="slide"><img src="assets/img/4.jpg"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about section-bg">
+            <div class="container">
+                <div class="section-title">
+                    <h2>HOW DOES IT WORK</h2>
+                </div>
+                <div class="row mx-md-5 mx-0">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2 col-6 text-center text-white mt-4">
+                        <img src="assets/img/11.jpg" alt="img 1">
+                        <p style="font-size: 22px;" class="mt-2">SOURCE FILE ANALYSIS</p>
+                    </div>
+                    <div class="col-md-2 col-6 text-center text-white mt-4">
+                        <img src="assets/img/22.jpg" alt="img 1">
+                        <p style="font-size: 22px;" class="mt-2">TEAM SELECTION</p>
+                    </div>
+                    <div class="col-md-2 col-6 text-center text-white mt-4">
+                        <img src="assets/img/33.jpg" alt="img 1">
+                        <p style="font-size: 22px;" class="mt-2">TRANSLATION</p>
+                    </div>
+                    <div class="col-md-2 col-6 text-center text-white mt-4">
+                        <img src="assets/img/44.jpg" alt="img 1">
+                        <p style="font-size: 22px;" class="mt-2">PROOFREADING</p>
+                    </div>
+                    <div class="col-md-2 col-6 text-center text-white mt-4">
+                        <img src="assets/img/55.jpg" alt="img 1">
+                        <p style="font-size: 22px;" class="mt-2">CLIENT’S APPROVAL</p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+
+        <section class="slider mx-md-5 mt-5 mx-0">
+            <div class="container text-center">
+                <h1 class="mt-3 mb-5" style="font-weight: 700;">PARTNERS</h1>
+                <div class="customer-logos slider">
+                    <div class="slide"><img src="assets/img/p1.png" width="150" height="50%"></div>
+                    <div class="slide"><img src="assets/img/p2.png" width="150" height="50%"></div>
+                    <div class="slide"><img src="assets/img/p3.png" width="150" height="50%"></div>
+                    <div class="slide"><img src="assets/img/p4.png" width="150" height="50%"></div>
+                    <div class="slide"><img src="assets/img/p5.png" width="150" height="50%"></div>
+                    <div class="slide"><img src="assets/img/p6.png" width="10%" height="120"></div>
+                    <div class="slide"><img src="assets/img/p7.png" width="150" height="50%"></div>
+                    <div class="slide"><img src="assets/img/p8.png" width="150" height="50%"></div>
+                </div>
+        </section>
+
+        <section class="faq language">
+            <div class="container">
+                <div class="row mx-md-5 mx-0">
+                    <div class="col-md-12">
+                        <h1 class="mt-3 text-center" style="font-weight: 700;">FAQ's</h1>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-xl-10">
+                              <ul class="faq-list pt-3">
+                                <li>
+                                  <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Are there special procedures for certified and notarized translations ? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                  <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                      <h5 class="mt-3">Certified translations: </h5>
+                                    <p>
+                                        Your source text should be sent to us by registered mail. If you don’t want to send your original by mail, inquire if you can send us a copy of the document. However, please do keep in mind that you will always have to submit our certified translation together with the original to the relevant office that requires the certification.
+                                    </p>
+                                    <h5 class="mt-3">Notarized Translations:</h5>
+                                    <p>In order to notarize a copy of our translation, the notary public has to see the original of the document, as well as the photocopy. The notary public will declare that the document is a true photocopy of the original. Usually an affidavit will go hand in hand with the notarization, in which the translator of the document declares that he/she translated the source document to the best of his/her knowledge.</p>
+                                  </div>
+                                </li>
+                  
+                                <li>
+                                  <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Will my information remain confidential ? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                  <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                    <p>
+                                        We pledge to keep our customers’ translation material confidential and shall not publicize the same or release it to any third party without the customers’ prior written consent. All of our translators and interpreters are bound to maintain strict confidentiality in all projects. If you have a confidentiality agreement you require, we will, of course, be happy to sign that as well.                                    </p>
+                                  </div>
+                                </li>
+                  
+                                <li>
+                                  <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">What kind of precautions do you take against computer viruses ? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                  <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                    <p>
+                                        All files coming in and going out are scanned with virus protection programs. We constantly keep them up to date with the latest virus data files.                                    </p>
+                                  </div>
+                                </li>
+                  
+                                <li>
+                                  <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What is the best file transfer method for large documents ? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                  <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                    <p>
+                                        We work with a wide range of file formats, including the standard Microsoft Office formats. If the file is large, you can compress the file using WinZip or similar programs.                                    </p>
+                                  </div>
+                                </li>
+                  
+                                <li>
+                                  <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">What does the actual translation process look like ? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                  <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                    <p>
+                                        01. Your inquiry is received.<br>
+                                        02. Your documents are reviewed for subject matter, complexity, length, etc.<br>
+                                        03. Our costs are calculated and a quote is submitted to you.<br>
+                                        04. Any outstanding questions are answered.<br>
+                                        05. Your purchase order is received.<br>
+                                        06. Translators are carefully selected for your project.<br>
+                                        07. A first draft is produced and reviewed.<br>
+                                        08. The translation is proofread by a second translator (optional – see remark on proofreading).<br>
+                                        09. The edited version is corrected.<br>
+                                        10. The finished product is delivered as per your specifications.                                    </p>
+                                  </div>
+                                </li>
+                  
+                                <li>
+                                  <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Which subjects can be translated ? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                  <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                    <p>
+                                        Here are some examples of subject areas that our translators work with. Feel free to inquire about your particular subject. General Texts <br>
+                                        Advertising<br>
+                                        Agriculture<br>
+                                        Architecture<br>
+                                        Art<br>
+                                        Astronomy<br>
+                                        Automotive<br>
+                                        Aviation and Space<br>
+                                        Business<br>
+                                        Computer<br>
+                                        Education<br>
+                                        Engineering<br>
+                                        Entertainment<br>
+                                        Environment<br>
+                                        Fashion<br>
+                                        Finances<br>
+                                        Food<br>
+                                        Government<br>
+                                        History<br>
+                                        Mathematics<br>
+                                        Medical<br>
+                                        Insurance<br>
+                                        Journalism<br>
+                                        Legal<br>
+                                        Leisure<br>
+                                        Linguistics<br>
+                                        Literature<br>
+                                        Marketing<br>
+                                        Military<br>
+                                        Nautical<br>
+                                        Religion<br>
+                                        Sciences<br>
+                                        Social<br>
+                                        Sciences<br>
+                                        Sports<br>
+                                        Technical<br>
+                                        Trade<br>
+                                        Travel                               </p>
+                                  </div>
+                                </li>
+
+                                <li>
+                                    <div data-bs-toggle="collapse" href="#faq7" class="collapsed question">Which language combinations can be translated ? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                                    <div id="faq7" class="collapse" data-bs-parent=".faq-list">
+                                      <p>
+                                        Even though we specialize in Asian and Scandinavian translations, our extensive team of translators covers nearly every language combination. Feel free to inquire about our services for your particular translation needs.</p>
+                                    </div>
+                                  </li>
+                  
+                              </ul>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="contact ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="#" method="post" role="form" class="php-email-form">
+                          <div class="row">
+                            <div class="form-group">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Name" required="">
+                            </div>
+                            <div class="form-group">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Email" required="">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <input type="number" class="form-control" name="phone" id="subject" placeholder="Phone" required="">
+                          </div>
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
+                          </div>
+                          <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                          </div>
+                          <div class="form-group"><button type="submit">Send</button></div><br><br>
+                        </form>
+                      </div>
+                      <div class="col-md-6 mt-md-0 mt-3">
+                        <div class="php-email-form">
+                          <div class="row">
+                            <h3 class="text-center text-white my-2">GO IN TOUCH WITH US</h3>
+                            <p style="font-size:18px;" class="text-white"><span style="color: #01C5C4;font-size:40px;" class="pr-5"><i class="fa fa-phone"></i></span> &nbsp;&nbsp;&nbsp;+254 726 105339</p>
+                            <p style="font-size:18px;" class="text-white"><span style="color: #01C5C4;font-size:40px;" class="pr-5"><i class="fa fa-envelope"></i></span> &nbsp;&nbsp;&nbsp;info@globalnative.com</p>
+                            <p style="font-size:18px;" class="text-white"><span style="color: #01C5C4;font-size:40px;" class="pr-5"><i class="fa fa-map-marker"></i></span> &nbsp;&nbsp;&nbsp;Garissa, Posta Road, Kenya</p>
+                            <div class="text-center">
+                                <a href="" style="background-color: #00C5BC;border-radius: 50%;padding: 15px;color: white;" class="d-inline-block pr-5"><i class="fa fa-facebook-official" style="font-size: 28px;"></i></a>
+                                <a href="" style="background-color: #00C5BC;border-radius: 50%;padding: 15px;color: white;" class="d-inline-block pr-5"><i class="fa fa-twitter" style="font-size: 28px;"></i></a>
+                                <a href="" style="background-color: #00C5BC;border-radius: 50%;padding: 15px;color: white;" class="d-inline-block pr-5"><i class="fa fa-youtube-play" style="font-size: 28px;"></i></a>
+                            </div>
+                          </div><br>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer" class="footer bg-black">
+            <p class="text-center mt-2 text-white">Global Native Translators © All Rights Reserved 2018. Umair Abbas</p>
+        </section>
+
+        <script>
+            $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        //arrows: false,
+        prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+        nextArrow: '<button class="slide-arrow next-arrow"></button>',
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+$(document).ready(function(){
+    $('.customer').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        //arrows: false,
+        prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+        nextArrow: '<button class="slide-arrow next-arrow"></button>',
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 2
+            }
+        }]
+    });
+});
+        </script>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/purecounter/purecounter.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>
